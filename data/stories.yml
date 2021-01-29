@@ -1,0 +1,48 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: system statistics
+  steps:
+  - intent: greet
+  - action: utter_greet
+#   - intent: system_stats
+#   - action: utter_stats
+#   - intent: app_opened
+#   - action: action_opened_app
+#   - intent: more_ram
+#   - action: action_more_ram
+#   - intent: more_cpu
+#   - action: action_more_cpu
+#   - intent: critical_event
+#   - action: action_critical_event
+#   - intent: next_scheduled_task
+#   - action: action_scheduled_task
+  

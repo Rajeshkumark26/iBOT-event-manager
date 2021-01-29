@@ -1,0 +1,126 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: system_stats
+  examples: |
+    - show me some stats 
+    - show stats
+    - system status
+    - show more
+
+- intent: app_opened
+  examples: |
+    - Most opened Apps today 
+    - frequent opened apps
+- intent: more_ram
+  examples: |
+    - Which App occupies more Ram
+    - large memory apps
+- intent: more_cpu
+  examples: |
+    - Which App has more CPU usage ?
+    - more cpu usage apps
+    
+- intent: next_scheduled_task    
+  examples: |
+    - what is next job scheduled ?
+    - show me scheduled jobs ?
+    - next scheduled jobs ?
+    
+- intent: critical_event
+  examples: |
+    - Most critical event ?
+    - what is most critical event ?
+    - app which creates more error ?
+    
+    

@@ -1,0 +1,84 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: greet the user 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  wait_for_user_input: false
+  
+- rule: ask for system stats 
+  steps:
+  - intent: system_stats
+  - action: utter_stats 
+  wait_for_user_input: false
+  
+- rule: app opened many times
+  steps:
+  - intent: app_opened
+  - action: action_opened_app
+  - action: utter_stats
+  wait_for_user_input: false
+  
+- rule: ask for more ram
+  steps:
+  - intent: more_ram
+  - action: action_more_ram
+  wait_for_user_input: false
+  
+- rule: ask for more cpu
+  steps:
+  - intent: more_cpu
+  - action: action_more_cpu
+  wait_for_user_input: false
+  
+  
+- rule: ask for Scheduled task
+  steps:
+  - intent: next_scheduled_task
+  - action: action_scheduled_task
+  wait_for_user_input: false
+
+- rule: ask for critical event
+  steps:
+  - intent: critical_event
+  - action: action_critical_event
+  wait_for_user_input: false
+  
+
+- rule: when user is unhappy
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  wait_for_user_input: false
+  
+- rule: when user is denied
+  steps:
+  - intent: deny
+  - action: utter_goodbye
+  wait_for_user_input: false
+  
+  
+- rule: when user is affirm
+  steps:
+  - intent: affirm
+  - action: utter_happy
+  wait_for_user_input: false
+  
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase 
+  
+

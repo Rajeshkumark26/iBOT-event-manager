@@ -1,0 +1,71 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- system_stats:
+    use_entities: true
+- app_opened:
+    use_entities: true
+- more_ram:
+    use_entities: true
+- more_cpu:
+    use_entities: true
+- next_scheduled_task:
+    use_entities: true
+- critical_event:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_stats:
+  - buttons:
+    - payload: /app_opened
+      title: Most opened Apps today
+    - payload: /more_ram
+      title: Which App occupies more Ram
+    - payload: /more_cpu
+      title: Which App has more CPU usage ?
+    text: 'I have these stats with me choose one '
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+actions:
+- action_opened_app
+- action_more_ram
+- action_more_cpu
+- action_critical_event
+- action_scheduled_task
+- action_listen
+forms: {}
+e2e_actions: []
