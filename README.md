@@ -5,7 +5,7 @@ it collects the details about the system using action server which connects with
 wmi (windows management instrumentation) api library.
 
 ## Architecture
-<img src="https://github.com/Rajeshkumark26/iBOT-event-manager/blob/main/chatbot_demo.gif" width="350" height="400">
+<img src="https://github.com/Rajeshkumark26/iBOT-event-manager/blob/main/chatbot_demo.gif" width="500" height="500">
 
 
 ## Contacts:
